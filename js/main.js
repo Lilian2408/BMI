@@ -2,10 +2,11 @@
 const weight = document.querySelector('.weight')
 const height = document.querySelector('.height')
 const submitBtn = document.getElementById('submit')
-const fields = document.querySelector('#fields')
+const clearFieldsBtn = document.querySelector('#fields')
 const errorText = document.querySelector('span')
 const bmi = document.querySelector('.bmians')
 const bmiStatus =document.querySelector('.statusquo')
+
 
 // adding eventlistener to a button
 submitBtn.addEventListener('click', function(){
@@ -46,6 +47,15 @@ submitBtn.addEventListener('click', function(){
 
     
 })
+
+clearFieldsBtn.addEventListener('click', function(){
+
+   weight.value = ''
+   height.value = ''
+   bmi.textContent = ''
+   bmiStatus.textContent = ''
+})
+
 
 // const heightInMeters = height / 10
 
